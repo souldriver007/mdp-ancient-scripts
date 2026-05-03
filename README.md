@@ -3,7 +3,9 @@
 
 **Author:** Adrian Sharman, SoulDriver Research ([souldriver.com.au](https://souldriver.com.au))
 
-**Paper:** *Metrological Domain Profiling: A Computational Approach to Administrative Architectures in Proto-Cuneiform, Proto-Elamite, and the Indus Valley Script* (Sharman, April 2026)
+**Paper I:** *Metrological Domain Profiling: A Computational Approach to Administrative Architectures in Proto-Cuneiform, Proto-Elamite, and the Indus Valley Script* (Sharman, April 2026) — DOI: [10.17613/mmjdt-ba806](https://doi.org/10.17613/mmjdt-ba806)
+
+**Paper II:** *Metrological Domain Profiling II: Functional Economic Ontologies from the Aegean Bronze Age to the Inca Empire* (Sharman, May 2026) — In preparation
 
 ---
 
@@ -11,17 +13,33 @@
 
 This repository contains the complete code and methodology for **Metrological Domain Profiling (MDP)**, a novel computational method that classifies signs in ancient administrative scripts by analysing their statistical co-occurrence with metrological numeral systems. The method requires no linguistic assumptions, no phonetic hypotheses, and no prior knowledge of sign meanings.
 
+**Update — May 2026:** MDP has been extended from 3 scripts to **7 scripts across 4 continents and 3 recording media (clay, stone, string)**, spanning 4,600 years of human administrative history. The new scripts include the complete Aegean trilogy (Cretan Hieroglyphic → Linear A → Linear B) and the Inca Khipu — the first application of MDP to a non-written, non-clay medium.
+
 ### Key Results
 
-| Script | Period | Corpus Size | Method | Accuracy / Finding |
-|--------|--------|------------|--------|-------------------|
-| **Proto-Cuneiform** | c. 3350–3000 BCE | 31,191 signs, 6,819 tablets | Subtractive MDP | **100% accuracy** on 28-sign validation set |
-| **Proto-Elamite** | c. 3100–2900 BCE | 14,716 records | Standard MDP | **79 signs classified**, 64% corpus coverage |
-| **Indus Valley** | c. 2600–1900 BCE | 11,280 signs, 2,543 inscriptions | Animal-Sign Enrichment | **Semantic locks discovered** (G321→Hare: 195.6× enrichment) |
+| # | Script | Period | Region | Corpus Size | Method | Key Finding |
+|---|--------|--------|--------|------------|--------|-------------|
+| 1 | **Proto-Cuneiform** | 3200 BCE | Mesopotamia | 31,191 signs, 6,819 tablets | Subtractive MDP | **100% accuracy** on 28-sign validation set |
+| 2 | **Proto-Elamite** | 3100 BCE | Iran | 14,716 records | Standard MDP | **79 signs classified**, 64% corpus coverage |
+| 3 | **Indus Valley** | 2600 BCE | South Asia | 11,280 signs, 2,543 inscriptions | Animal-Sign Enrichment | **Semantic locks** (G321→Hare: 195.6×) |
+| 4 | **Cretan Hieroglyphic** | 2100 BCE | Crete | 317 inscriptions | Commodity-Ideogram MDP | **KU-RO cognate confirmed**; numbered signs *155/*156/*161 identified as probable commodity ideograms |
+| 5 | **Linear A** | 1800 BCE | Crete | 1,712 inscriptions (419 tablets) | Commodity-Ideogram MDP | **120 Minoan words classified**; register separation; fraction domain divergence; two-tier summation |
+| 6 | **Linear B** | 1400 BCE | Greece | 5,832 inscriptions | Control Validation | **Functional ontology proof** — MDP classifies by administrative context, not dictionary meaning |
+| 7 | **Inca Khipu** | 1400 CE | South America | 619 khipus, 54,403 cords, 110,677 knots | Cord-Colour Domain Profiling | **Black cord knot inversion**; colour-value domain separation; provenance specialisation |
+
+### The Administrative Segregation Principle
+
+Across all seven scripts, MDP reveals a universal structural principle:
+
+> *When human societies build administrative systems at scale, they mathematically segregate their counting domains by commodity type — regardless of medium (clay, stone, string), continent, or millennium.*
+
+This principle operates in Sumerian clay tablets (3200 BCE), Proto-Elamite accounting records (3100 BCE), Indus Valley seals (2600 BCE), Cretan Hieroglyphic stamps (2100 BCE), Minoan ledgers (1800 BCE), Mycenaean archives (1400 BCE), and Inca knotted cords (1400 CE).
 
 ---
 
 ### Repository Contents
+
+#### Paper I Scripts (Published)
 
 | File | Description |
 |------|-------------|
@@ -29,123 +47,133 @@ This repository contains the complete code and methodology for **Metrological Do
 | `protoelamite_mdp.py` | **Study 2:** Applies MDP to Proto-Elamite. Classifies 79 signs, reveals syntax and seal specialisation. |
 | `indus_mdp.py` | **Study 3:** Adapts methodology for the Indus Valley Script. Discovers animal-sign semantic locks. |
 | `Indus_scripts_terminal_output.md` | Full terminal output from the Indus analysis run. |
-| `README.md` | This file. |
+
+#### Paper II Scripts (May 2026)
+
+| File | Description |
+|------|-------------|
+| `lineara_mdp.py` | **Study 4a:** Initial MDP pass on Linear A (all inscriptions). |
+| `lineara_snoop.py` | **Study 4b:** Deep exploration script for Linear A (10 snoops). |
+| `lineara_mdp_v2.py` | **Study 4c:** Master V2 analysis — tablet-filtered, 14-step analysis with register separation, summation verification, fraction divergence, scribe/room specialisation. |
+| `linearb_mdp.py` | **Study 5:** Linear B control validation — 8-step analysis proving functional ontology vs semantic meaning. |
+| `khipu_explore.py` | **Study 6a:** Schema explorer for the Open Khipu Repository SQLite database. |
+| `khipu_mdp.py` | **Study 6b:** Full MDP analysis of Inca Khipu — 10-step cord-colour domain profiling. |
+| `cretan_hieroglyphic_mdp.py` | **Study 7:** Cretan Hieroglyphic MDP — completes the Aegean Trilogy. |
+
+#### Terminal Outputs
+
+| File | Description |
+|------|-------------|
+| `lineara_mdp_v2_output.md` | Full terminal output from Linear A V2 master analysis. |
+| `linearb_mdp_output.md` | Full terminal output from Linear B control validation. |
+| `khipu_mdp_output.md` | Full terminal output from Inca Khipu analysis. |
+| `cretan_hieroglyphic_mdp_output.md` | Full terminal output from Cretan Hieroglyphic analysis. |
 
 ---
 
 ### Data Sources & Reproduction Instructions
 
-This repository does not include the source datasets due to size constraints. All data is freely available from the following sources:
+This repository does not include the source datasets due to size constraints. All data is freely available:
 
-#### 1. CDLI Bulk Data (Proto-Cuneiform & Proto-Elamite)
+#### Paper I Data
 
-Both `protocuneiform_mdp.py` and `protoelamite_mdp.py` require two files from the **Cuneiform Digital Library Initiative (CDLI)**:
+| Source | Files Required | How to Obtain |
+|--------|---------------|---------------|
+| **CDLI** (Proto-Cuneiform & Proto-Elamite) | `cdliatf_unblocked.atf` (~83 MB), `cdli_cat.csv` (~148 MB) | [cdli.earth](https://cdli.earth/) or [github.com/cdli-gh/data](https://github.com/cdli-gh/data) |
+| **Yajnadevam Indus Corpus** | `population-script.sql` (~430 KB) | [github.com/yajnadevam/indus-website](https://github.com/yajnadevam/indus-website) |
 
-| File | Description | Approx. Size |
-|------|-------------|-------------|
-| `cdliatf_unblocked.atf` | Bulk ATF transliteration dump — contains transliterations of ~135,000 cuneiform tablets | ~83 MB |
-| `cdli_cat.csv` | Catalogue with metadata (period, provenience, language) for each tablet | ~148 MB |
+#### Paper II Data
 
-**How to obtain:**
-1. Visit [https://cdli.earth/](https://cdli.earth/) (or [https://github.com/cdli-gh/data](https://github.com/cdli-gh/data))
-2. Download the bulk ATF transliteration file and the catalogue CSV
-3. Place both files in a local directory (e.g., `C:\Users\you\cdli-data\`)
-4. Update the `ATF_FILE` and `CAT_FILE` path variables at the top of each script
+| Source | Files Required | How to Obtain |
+|--------|---------------|---------------|
+| **Linear A Explorer** | `LinearAInscriptions.js` | [github.com/mwenge/lineara.xyz](https://github.com/mwenge/lineara.xyz) — download ZIP, extract |
+| **Linear B Explorer** | `LinearBInscriptions.js`, `groups.js`, `lexicon.js` | [github.com/mwenge/linearb.xyz](https://github.com/mwenge/linearb.xyz) — download ZIP, extract |
+| **Cretan Hieroglyphic Explorer** | `CretanHieroInscriptions.js`, `simpledictionary.js` | [github.com/mwenge/linear0.xyz](https://github.com/mwenge/linear0.xyz) — download ZIP, extract |
+| **Open Khipu Repository** | `khipu.db` (37 MB SQLite) | [github.com/khipulab/open-khipu-repository](https://github.com/khipulab/open-khipu-repository) — DOI: [10.5281/zenodo.18025748](https://doi.org/10.5281/zenodo.18025748) |
 
-The CDLI data is open-access and freely available for research purposes.
+#### Setup Instructions
 
-#### 2. Yajnadevam Indus Corpus (Indus Valley Script)
+```bash
+# 1. Clone this repository
+git clone https://github.com/souldriver007/mdp-ancient-scripts.git
 
-`indus_mdp.py` requires the SQL population script from the **yajnadevam/indus-website** repository, which contains a structured digital extraction of the Interactive Corpus of Indus Texts (ICIT; Wells & Fuls 2015).
+# 2. Download data sources listed above into your preferred directories
 
-| File | Description | Approx. Size |
-|------|-------------|-------------|
-| `population-script.sql` | MySQL dump containing 2,543 inscriptions with sign sequences, iconographic descriptions, and site provenance | ~430 KB |
+# 3. Update file paths at the top of each script
 
-**How to obtain:**
-1. Clone or download [https://github.com/yajnadevam/indus-website](https://github.com/yajnadevam/indus-website)
-2. The file `population-script.sql` is in the repository root
-3. Update the `SQL_FILE` path variable at the top of `indus_mdp.py`
-
-Note: The script parses the SQL file directly using regex — no MySQL installation is required.
-
-#### 3. Alternative Indus Corpus (Smaller, JSON format)
-
-For a smaller Indus corpus (179 Mohenjo-daro unicorn seals in JSON format), see [https://github.com/mayig/indus-valley-script-corpus](https://github.com/mayig/indus-valley-script-corpus). This corpus was used for initial testing but lacks the multi-site, multi-animal coverage needed for the semantic lock analysis.
-
----
+# 4. Run any script:
+python protocuneiform_mdp.py           # Paper I — Proto-Cuneiform (100% validation)
+python protoelamite_mdp.py             # Paper I — Proto-Elamite
+python indus_mdp.py                    # Paper I — Indus Valley
+python lineara_mdp_v2.py               # Paper II — Linear A (master analysis)
+python linearb_mdp.py                  # Paper II — Linear B (control validation)
+python khipu_mdp.py                    # Paper II — Inca Khipu
+python cretan_hieroglyphic_mdp.py      # Paper II — Cretan Hieroglyphic
+```
 
 ### Requirements
 
 - Python 3.8+
-- No external dependencies — uses only `re`, `csv`, `os`, `json`, and `collections` from the Python standard library
+- No external dependencies — uses only `re`, `csv`, `os`, `json`, `sqlite3`, and `collections` from the Python standard library
 - Each script runs in under 60 seconds on a standard laptop
-
-### Usage
-
-```bash
-# 1. Download the data sources listed above
-# 2. Update file paths in each script to point to your local data files
-# 3. Run:
-
-python protocuneiform_mdp.py    # Study 1: Proto-Cuneiform Validation (expect: 28/28 = 100%)
-python protoelamite_mdp.py      # Study 2: Proto-Elamite Application
-python indus_mdp.py             # Study 3: Indus Valley Discovery
-```
 
 ---
 
-### Methodology: Subtractive Metrological Domain Profiling
+### Methodology Overview
 
-Ancient administrative scripts pair commodity signs with numeral notations drawn from specific metrological systems. Grain is measured in capacity units (with fractional subdivisions), livestock is counted in discrete integers, and land is measured in area units. MDP exploits these metrological signatures to classify signs by commodity domain.
+#### The Core Principle
 
-#### The Polyvalency Problem
+Ancient administrative scripts pair **commodity signs** (what is being counted) with **numerals** (how many). MDP exploits this pairing to classify unknown signs by their statistical co-occurrence with numerals and commodity ideograms.
 
-Proto-cuneiform uses **polyvalent** numeral signs — the same grapheme (N14) represents different values in different metrological systems. As Englund (2011) describes: *"the sign N14 can represent ten clay pots of butter oil, a measure of grain corresponding to about 150 litres of barley, or a field of about 6 hectares."* Standard numeral co-occurrence analysis fails because the numeral codes are domain-ambiguous.
+#### Method Variants by Script
 
-Proto-Elamite, by contrast, evolved **dedicated** numeral codes per domain (N39B exclusively for grain capacity, N23/N51 exclusively for the decimal/animate system). This architectural difference — shared vs dedicated numeral codes — is itself a finding about how the two contemporary writing systems diverged in encoding metrological information.
+| Script | MDP Variant | Commodity Anchor | Numeral Anchor |
+|--------|------------|-----------------|----------------|
+| Proto-Cuneiform | Subtractive MDP | System-specific fractional anchors (N39A, N24, N51) | Polyvalent numerals (N01, N14, N34) |
+| Proto-Elamite | Standard MDP | Dedicated numeral system codes (N39B, N23) | Domain-specific numerals |
+| Indus Valley | Animal-Sign Enrichment | Iconographic field symbols (animals) | Stroke-sign modifiers (G1–G7) |
+| Linear A / B / Cretan Hieroglyphic | Commodity-Ideogram MDP | Explicit commodity logograms (GRA, OLE, VIN, OVIS) | Decimal numerals + measure subunits (T, V, S, M, N, P) |
+| Inca Khipu | Cord-Colour Domain Profiling | Pendant cord colour (64 Munsell codes) | Knot values (base-10 decimal: S/L/E knot types) |
 
-#### The Subtractive Solution
+#### The Functional Ontology Discovery (Linear B)
 
-**Subtractive MDP** overcomes the polyvalency barrier with a three-step sieve:
+When applied to the fully deciphered Linear B corpus, MDP achieved only 14% agreement with traditional Greek dictionaries — but this "failure" revealed the method's most important theoretical insight. MDP classifies words by their **administrative context** (which department handled them) rather than their **semantic meaning** (what they literally translate to). A slave (`do-e-ro` = *doelos*) is classified as GRAIN because slaves were administered through the grain-ration department. This provides economic historians with a **functional ontology** of ancient economies that pure linguistic translation cannot replicate.
 
-1. **Total Numeral Adjacency:** Is the sign counted at all? (Uses all numerals including polyvalent N01/N14/N34)
-2. **System-Specific Anchor Check:** Does it co-occur with fractional anchors unique to a specific system?
-   - N39A, N24 → Grain capacity (ŠE system)
-   - N51, N54 → Bisexagesimal rations
-   - N50, N47, N08 → Area/land (GAN₂ system)
-3. **Subtractive Deduction:** If counted but no system-specific anchors → sexagesimal discrete (livestock, textiles, metals, people)
+#### The Khipu Cross-Medium Proof
 
-#### Development Trajectory
+By successfully applying MDP to Inca knotted cords — where cord colour replaces commodity ideograms and knot values replace written numerals — the method proves that the Administrative Segregation Principle operates across recording media. Black cords (LK) show a completely inverted knot-type signature (88% L-type vs 65–82% S-type for all other colours), demonstrating metrological domain separation on string.
 
-The final 100% accuracy was achieved through iterative refinement:
+---
 
-| Version | Accuracy | Key Change |
-|---------|----------|------------|
-| v1 | 16% (3/19) | Hard-coded Proto-Elamite numeral systems — wrong for proto-cuneiform |
-| v2 | 22% (4/18) | Data-driven anchor discovery — no livestock discriminators found |
-| v3 | 55% (6/11) | Subtractive method introduced — grain failed due to anchor rarity |
-| v4 | 94% (15/16) | Data normalisation fixes (tilde stripping, lowercase purge, compounds) |
-| v4 expanded | **100% (28/28)** | Corrected validation dictionary + expanded test set |
+### Development Trajectory
+
+| Version | Date | Scripts | Key Achievement |
+|---------|------|---------|----------------|
+| v1–v3 | April 2026 | Proto-Cuneiform | Iterative refinement from 16% to 55% accuracy |
+| v4 | April 2026 | Proto-Cuneiform | **100% accuracy** (28/28) — data normalisation fixes |
+| v4 expanded | April 2026 | + Proto-Elamite, Indus | 79 PE signs classified; Indus semantic locks discovered |
+| **Paper I published** | April 2026 | 3 scripts | DOI: 10.17613/mmjdt-ba806 |
+| v5 | May 2026 | + Linear A | 120 Minoan words classified; register separation; fraction divergence |
+| v6 | May 2026 | + Linear B | Functional ontology proof; measure subunit divergence confirmed |
+| v7 | May 2026 | + Inca Khipu | Cross-medium validation; black cord knot inversion |
+| v8 | May 2026 | + Cretan Hieroglyphic | Aegean Trilogy complete; KU-RO cognate confirmed |
+| **Paper II in prep** | May 2026 | **7 scripts total** | 4 continents, 3 media, 4,600 years |
 
 ---
 
 ### The Indus Discovery
 
-By adapting MDP to analyse **sign–animal co-occurrence** instead of sign–numeral co-occurrence, we discovered that specific Indus signs are statistically **locked** to specific seal animals:
+By adapting MDP to analyse **sign–animal co-occurrence**, we discovered that specific Indus signs are statistically **locked** to specific seal animals:
 
 | Sign | Animal | Enrichment | Exclusivity |
 |------|--------|------------|-------------|
 | G321 | Hare | **195.6×** | 12/12 (100%) |
 | G850 | Anthropomorphic | **60.5×** | 10/10 (100%) |
 | G845 | Hare | **63.6×** | Shared with Anthropomorphic |
-| G407 | Hare | **50.9×** | Primary hare, shared |
 | G48 | Elephant | **35.6×** | Near-exclusive |
 | G318 | Rhinoceros | **37.0×** | Near-exclusive |
-| G436 | Rhinoceros | **31.7×** | Near-exclusive |
-| G923 | Elephant | **14.8×** | Exclusive |
 
-Each animal type possesses a **unique sign vocabulary** — a set of enriched signs that collectively distinguish its inscriptions from all others. This provides the first corpus-scale statistical evidence that Indus seal animals encode **institutional/departmental identity**, paralleling the commodity-specific seal ownership discovered in Proto-Elamite.
+This provides the first corpus-scale statistical evidence that Indus seal animals encode **institutional/departmental identity**.
 
 ---
 
@@ -153,9 +181,7 @@ Each animal type possesses a **unique sign vocabulary** — a set of enriched si
 
 This research was conducted using **KARP** (Knowledge Acquisition Research Protocol), a multi-agent AI deliberation system developed by SoulDriver Research that orchestrates Claude (Anthropic), GPT, Gemini (Google), and Grok through structured adversarial research sessions.
 
-The initial hypothesis — that Proto-Elamite's dedicated numeral codes could serve as a computational anchor for unsupervised sign classification — emerged from KARP council sessions on undeciphered ancient scripts. The Subtractive MDP variant was proposed during a Gemini review that identified the polyvalency barrier. Three critical data-normalisation fixes were likewise identified through external AI review.
-
-The complete research trajectory — from initial hypothesis through five algorithm iterations to the final 100% validation, plus the Indus semantic lock discovery — was conducted in a single research session, demonstrating the potential of structured multi-agent AI deliberation for accelerating computational humanities research.
+The complete Paper II research trajectory — Linear A, Linear B, Inca Khipu, and Cretan Hieroglyphic — was conducted in a single research session of approximately three hours, demonstrating the potential of structured multi-agent AI deliberation for accelerating computational humanities research.
 
 For more on KARP and SoulDriver Research, visit [souldriver.com.au](https://souldriver.com.au).
 
@@ -172,14 +198,16 @@ If you use this code or methodology, please cite:
 ```
 Sharman, A. (2026). Metrological Domain Profiling: A Computational Approach to
 Administrative Architectures in Proto-Cuneiform, Proto-Elamite, and the Indus Valley
-Script. SoulDriver Research. https://souldriver.com.au
+Script. SoulDriver Research. DOI: 10.17613/mmjdt-ba806
 ```
 
 ### Acknowledgements
 
 - **CDLI** (Cuneiform Digital Library Initiative) for open-access cuneiform data
+- **Rob Hogan** (mwenge) for the lineara.xyz, linearb.xyz, and linear0.xyz digital corpus explorers
+- **Open Khipu Repository** team (Mackinley FitzPatrick, Carrie Brezine, Gary Urton, Jon Clindaniel) for the digitised khipu database
 - **Bryan K. Wells and Andreas Fuls** for the Interactive Corpus of Indus Texts (ICIT)
 - **yajnadevam** for the digital ICIT extraction
-- **mayig** for the Indus Valley script corpus (JSON format)
-- **Robert K. Englund and Peter Damerow** for the foundational work on proto-cuneiform numeral systems
+- **Robert K. Englund and Peter Damerow** for foundational work on proto-cuneiform numeral systems
 - **Jacob L. Dahl** for Proto-Elamite sign identifications
+- **Michael Ventris and John Chadwick** for the decipherment of Linear B

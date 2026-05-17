@@ -5,7 +5,7 @@
 
 **Paper I:** *Metrological Domain Profiling: A Computational Approach to Administrative Architectures in Proto-Cuneiform, Proto-Elamite, and the Indus Valley Script* (Sharman, April 2026) — DOI: [10.17613/mmjdt-ba806](https://doi.org/10.17613/mmjdt-ba806)
 
-**Paper II:** *Metrological Domain Profiling II: Functional Economic Ontologies from the Aegean Bronze Age to the Inca Empire* (Sharman, May 2026) — In preparation
+**Paper II:** *Metrological Domain Profiling II: Functional Economic Ontologies from the Aegean Bronze Age to the Inca Empire* (Sharman, May 2026) — DOI: [10.17613/q536f-0wa13](https://doi.org/10.17613/q536f-0wa13)
 
 ---
 
@@ -29,9 +29,9 @@ This repository contains the complete code and methodology for **Metrological Do
 
 ### The Administrative Segregation Principle
 
-Across all seven scripts, MDP reveals a universal structural principle:
+Across all seven scripts, MDP reveals a strong recurring structural pattern:
 
-> *When human societies build administrative systems at scale, they mathematically segregate their counting domains by commodity type — regardless of medium (clay, stone, string), continent, or millennium.*
+> *When human societies build administrative systems at scale, they tend to mathematically segregate their counting domains by commodity type — regardless of medium (clay, stone, string), continent, or millennium.*
 
 This principle operates in Sumerian clay tablets (3200 BCE), Proto-Elamite accounting records (3100 BCE), Indus Valley seals (2600 BCE), Cretan Hieroglyphic stamps (2100 BCE), Minoan ledgers (1800 BCE), Mycenaean archives (1400 BCE), and Inca knotted cords (1400 CE).
 
@@ -39,7 +39,7 @@ This principle operates in Sumerian clay tablets (3200 BCE), Proto-Elamite accou
 
 ### Repository Contents
 
-#### Paper I Scripts (Published)
+#### Paper I Scripts (Published — DOI: [10.17613/mmjdt-ba806](https://doi.org/10.17613/mmjdt-ba806))
 
 | File | Description |
 |------|-------------|
@@ -48,7 +48,7 @@ This principle operates in Sumerian clay tablets (3200 BCE), Proto-Elamite accou
 | `indus_mdp.py` | **Study 3:** Adapts methodology for the Indus Valley Script. Discovers animal-sign semantic locks. |
 | `Indus_scripts_terminal_output.md` | Full terminal output from the Indus analysis run. |
 
-#### Paper II Scripts (May 2026)
+#### Paper II Scripts (Published — DOI: [10.17613/q536f-0wa13](https://doi.org/10.17613/q536f-0wa13))
 
 | File | Description |
 |------|-------------|
@@ -60,14 +60,21 @@ This principle operates in Sumerian clay tablets (3200 BCE), Proto-Elamite accou
 | `khipu_mdp.py` | **Study 6b:** Full MDP analysis of Inca Khipu — 10-step cord-colour domain profiling. |
 | `cretan_hieroglyphic_mdp.py` | **Study 7:** Cretan Hieroglyphic MDP — completes the Aegean Trilogy. |
 
+#### Papers
+
+| File | Description |
+|------|-------------|
+| `MDP_Tri_Script_Paper_V1_Sharman_2026.pdf` | Paper I — Proto-Cuneiform, Proto-Elamite, Indus Valley |
+| `MDP_Paper_II_v2_Sharman_2026.pdf` | Paper II — Aegean Trilogy + Inca Khipu |
+
 #### Terminal Outputs
 
 | File | Description |
 |------|-------------|
-| `lineara_mdp_v2_output.md` | Full terminal output from Linear A V2 master analysis. |
-| `linearb_mdp_output.md` | Full terminal output from Linear B control validation. |
-| `khipu_mdp_output.md` | Full terminal output from Inca Khipu analysis. |
-| `cretan_hieroglyphic_mdp_output.md` | Full terminal output from Cretan Hieroglyphic analysis. |
+| `lineara_mdp_terminal_output.md` | Full terminal output from Linear A V2 master analysis. |
+| `linearb_mdp_terminal_output.md` | Full terminal output from Linear B control validation. |
+| `khipu_mdp_terminal_output.md` | Full terminal output from Inca Khipu analysis. |
+| `cretan_hieroglyphic_mdp_terminal_output.md` | Full terminal output from Cretan Hieroglyphic analysis. |
 
 ---
 
@@ -152,12 +159,12 @@ By successfully applying MDP to Inca knotted cords — where cord colour replace
 | v1–v3 | April 2026 | Proto-Cuneiform | Iterative refinement from 16% to 55% accuracy |
 | v4 | April 2026 | Proto-Cuneiform | **100% accuracy** (28/28) — data normalisation fixes |
 | v4 expanded | April 2026 | + Proto-Elamite, Indus | 79 PE signs classified; Indus semantic locks discovered |
-| **Paper I published** | April 2026 | 3 scripts | DOI: 10.17613/mmjdt-ba806 |
+| **Paper I published** | April 2026 | 3 scripts | DOI: [10.17613/mmjdt-ba806](https://doi.org/10.17613/mmjdt-ba806) |
 | v5 | May 2026 | + Linear A | 120 Minoan words classified; register separation; fraction divergence |
 | v6 | May 2026 | + Linear B | Functional ontology proof; measure subunit divergence confirmed |
 | v7 | May 2026 | + Inca Khipu | Cross-medium validation; black cord knot inversion |
 | v8 | May 2026 | + Cretan Hieroglyphic | Aegean Trilogy complete; KU-RO cognate confirmed |
-| **Paper II in prep** | May 2026 | **7 scripts total** | 4 continents, 3 media, 4,600 years |
+| **Paper II published** | May 2026 | **7 scripts total** | DOI: [10.17613/q536f-0wa13](https://doi.org/10.17613/q536f-0wa13) |
 
 ---
 
@@ -199,6 +206,10 @@ If you use this code or methodology, please cite:
 Sharman, A. (2026). Metrological Domain Profiling: A Computational Approach to
 Administrative Architectures in Proto-Cuneiform, Proto-Elamite, and the Indus Valley
 Script. SoulDriver Research. DOI: 10.17613/mmjdt-ba806
+
+Sharman, A. (2026). Metrological Domain Profiling II: Functional Economic Ontologies
+from the Aegean Bronze Age to the Inca Empire. SoulDriver Research.
+DOI: 10.17613/q536f-0wa13
 ```
 
 ### Acknowledgements

@@ -3,7 +3,7 @@
 
 **Author:** Adrian Sharman, SoulDriver Research ([souldriver.com.au](https://souldriver.com.au))
 
-**Paper III:** *Metrological Domain Profiling III: Reconstructing the 3D Tactile Grammar of the Inca Khipu* (Sharman, June 2026)
+**Paper III:** *Metrological Domain Profiling III: Reconstructing the 3D Tactile Grammar of the Inca Khipu* (Sharman, June 2026) — DOI: [10.17613/c97d4-pgs78](https://doi.org/10.17613/c97d4-pgs78)
 
 **Paper II:** *Metrological Domain Profiling II: Functional Economic Ontologies from the Aegean Bronze Age to the Inca Empire* (Sharman, May 2026) — DOI: [10.17613/q536f-0wa13](https://doi.org/10.17613/q536f-0wa13)
 
@@ -183,7 +183,7 @@ Paper III extends this to demonstrate that the khipu encodes information across 
 | v8 | May 2026 | + Cretan Hieroglyphic | Aegean Trilogy complete; KU-RO cognate confirmed |
 | **Paper II published** | May 2026 | **7 scripts total** | DOI: [10.17613/q536f-0wa13](https://doi.org/10.17613/q536f-0wa13) |
 | v9 | June 2026 | Inca Khipu (deep) | 3D tactile-spatial MDP: fiber, depth, transitions, canutito |
-| **Paper III draft** | June 2026 | **Khipu 3D Ontology** | 16 findings, 3 falsified. "The Spreadsheet Fallacy" |
+| **Paper III published** | June 2026 | **Khipu 3D Ontology** | DOI: [10.17613/c97d4-pgs78](https://doi.org/10.17613/c97d4-pgs78) — 16 findings, 3 falsified. "The Spreadsheet Fallacy" |
 
 ---
 
@@ -231,7 +231,7 @@ from the Aegean Bronze Age to the Inca Empire. SoulDriver Research.
 DOI: 10.17613/q536f-0wa13
 
 Sharman, A. (2026). Metrological Domain Profiling III: Reconstructing the 3D Tactile
-Grammar of the Inca Khipu. SoulDriver Research.
+Grammar of the Inca Khipu. SoulDriver Research. DOI: 10.17613/c97d4-pgs78
 ```
 
 ### Acknowledgements

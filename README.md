@@ -3,9 +3,11 @@
 
 **Author:** Adrian Sharman, SoulDriver Research ([souldriver.com.au](https://souldriver.com.au))
 
-**Paper I:** *Metrological Domain Profiling: A Computational Approach to Administrative Architectures in Proto-Cuneiform, Proto-Elamite, and the Indus Valley Script* (Sharman, April 2026) — DOI: [10.17613/mmjdt-ba806](https://doi.org/10.17613/mmjdt-ba806)
+**Paper III:** *Metrological Domain Profiling III: Reconstructing the 3D Tactile Grammar of the Inca Khipu* (Sharman, June 2026)
 
 **Paper II:** *Metrological Domain Profiling II: Functional Economic Ontologies from the Aegean Bronze Age to the Inca Empire* (Sharman, May 2026) — DOI: [10.17613/q536f-0wa13](https://doi.org/10.17613/q536f-0wa13)
+
+**Paper I:** *Metrological Domain Profiling: A Computational Approach to Administrative Architectures in Proto-Cuneiform, Proto-Elamite, and the Indus Valley Script* (Sharman, April 2026) — DOI: [10.17613/mmjdt-ba806](https://doi.org/10.17613/mmjdt-ba806)
 
 ---
 
@@ -13,7 +15,7 @@
 
 This repository contains the complete code and methodology for **Metrological Domain Profiling (MDP)**, a novel computational method that classifies signs in ancient administrative scripts by analysing their statistical co-occurrence with metrological numeral systems. The method requires no linguistic assumptions, no phonetic hypotheses, and no prior knowledge of sign meanings.
 
-**Update — May 2026:** MDP has been extended from 3 scripts to **7 scripts across 4 continents and 3 recording media (clay, stone, string)**, spanning 4,600 years of human administrative history. The new scripts include the complete Aegean trilogy (Cretan Hieroglyphic → Linear A → Linear B) and the Inca Khipu — the first application of MDP to a non-written, non-clay medium.
+**Update — June 2026:** MDP Paper III extends khipu analysis from 1D colour profiling to **full 3D tactile-spatial ontology**, exploiting fiber type, subsidiary tree depth, colour transition constraints, and canutito metadata across 54,403 cords. Sixteen structural findings identified including forbidden colour sequences, decimal run-length groupings, and an independent canutito metadata layer (98.6% colour-divergent from parent cords). Three hypotheses explicitly tested and falsified (spacing as punctuation, Hanan/Hurin midpoint split, cord thickness).
 
 ### Key Results
 
@@ -26,6 +28,7 @@ This repository contains the complete code and methodology for **Metrological Do
 | 5 | **Linear A** | 1800 BCE | Crete | 1,712 inscriptions (419 tablets) | Commodity-Ideogram MDP | **120 Minoan words classified**; register separation; fraction domain divergence; two-tier summation |
 | 6 | **Linear B** | 1400 BCE | Greece | 5,832 inscriptions | Control Validation | **Functional ontology proof** — MDP classifies by administrative context, not dictionary meaning |
 | 7 | **Inca Khipu** | 1400 CE | South America | 619 khipus, 54,403 cords, 110,677 knots | Cord-Colour Domain Profiling | **Black cord knot inversion**; colour-value domain separation; provenance specialisation |
+| 7b | **Inca Khipu (Paper III)** | 1400 CE | South America | 54,403 cords, 619 khipus | 3D Tactile-Spatial MDP | **Forbidden colour transitions**; fiber redefines domains (41×); subsidiary summation (17.4%); canutito independent metadata layer; decimal run-length groupings |
 
 ### The Administrative Segregation Principle
 
@@ -60,12 +63,21 @@ This principle operates in Sumerian clay tablets (3200 BCE), Proto-Elamite accou
 | `khipu_mdp.py` | **Study 6b:** Full MDP analysis of Inca Khipu — 10-step cord-colour domain profiling. |
 | `cretan_hieroglyphic_mdp.py` | **Study 7:** Cretan Hieroglyphic MDP — completes the Aegean Trilogy. |
 
+#### Paper III Scripts (June 2026)
+
+| File | Description |
+|------|-------------|
+| `khipu_mdp_v3_5_final.py` | **Study 6c:** Final 3D tactile-spatial analysis — 16 tests with plain-English explanations covering material metrology, topological syntax, categorical sorting, and hardware metadata. |
+| `khipu_verify.py` | **Verification suite:** 8 independent raw SQL cross-checks validating all key findings. Includes Zipf's Law control experiments with 3 randomised baselines. |
+| `khipu_audit.py` | **Database audit:** Complete schema scan of the OKR identifying 16+ previously unexploited variables (ATTACH_POS, SPACING, TERMINATION, THICKNESS, CORD_LEVEL, AXIS_ORIENTATION, canutito tables, primary cord metadata). |
+
 #### Papers
 
 | File | Description |
 |------|-------------|
 | `MDP_Tri_Script_Paper_V1_Sharman_2026.pdf` | Paper I — Proto-Cuneiform, Proto-Elamite, Indus Valley |
 | `MDP_Paper_II_v2_Sharman_2026.pdf` | Paper II — Aegean Trilogy + Inca Khipu |
+| `MDP_Paper_III_Sharman_2026.pdf` | Paper III — Inca Khipu 3D Tactile Grammar |
 
 #### Terminal Outputs
 
@@ -73,8 +85,9 @@ This principle operates in Sumerian clay tablets (3200 BCE), Proto-Elamite accou
 |------|-------------|
 | `lineara_mdp_terminal_output.md` | Full terminal output from Linear A V2 master analysis. |
 | `linearb_mdp_terminal_output.md` | Full terminal output from Linear B control validation. |
-| `khipu_mdp_terminal_output.md` | Full terminal output from Inca Khipu analysis. |
+| `khipu_mdp_terminal_output.md` | Full terminal output from Inca Khipu analysis (Paper II). |
 | `cretan_hieroglyphic_mdp_terminal_output.md` | Full terminal output from Cretan Hieroglyphic analysis. |
+| `khipu_mdp_v3_5_terminal_output.md` | Full terminal output from Paper III 3D tactile-spatial analysis (v3 + v3.5, 16 tests). |
 
 ---
 
@@ -116,6 +129,7 @@ python lineara_mdp_v2.py               # Paper II — Linear A (master analysis)
 python linearb_mdp.py                  # Paper II — Linear B (control validation)
 python khipu_mdp.py                    # Paper II — Inca Khipu
 python cretan_hieroglyphic_mdp.py      # Paper II — Cretan Hieroglyphic
+python khipu_mdp_v3_5_final.py         # Paper III — Inca Khipu 3D ontology (16 tests)
 ```
 
 ### Requirements
@@ -141,6 +155,7 @@ Ancient administrative scripts pair **commodity signs** (what is being counted) 
 | Indus Valley | Animal-Sign Enrichment | Iconographic field symbols (animals) | Stroke-sign modifiers (G1–G7) |
 | Linear A / B / Cretan Hieroglyphic | Commodity-Ideogram MDP | Explicit commodity logograms (GRA, OLE, VIN, OVIS) | Decimal numerals + measure subunits (T, V, S, M, N, P) |
 | Inca Khipu | Cord-Colour Domain Profiling | Pendant cord colour (64 Munsell codes) | Knot values (base-10 decimal: S/L/E knot types) |
+| Inca Khipu (Paper III) | 3D Tactile-Spatial MDP | Colour + fiber + depth + canutito | Knot values + tree hierarchy + physical construction |
 
 #### The Functional Ontology Discovery (Linear B)
 
@@ -148,7 +163,9 @@ When applied to the fully deciphered Linear B corpus, MDP achieved only 14% agre
 
 #### The Khipu Cross-Medium Proof
 
-By successfully applying MDP to Inca knotted cords — where cord colour replaces commodity ideograms and knot values replace written numerals — the method proves that the Administrative Segregation Principle operates across recording media. Black cords (LK) show a completely inverted knot-type signature (88% L-type vs 65–82% S-type for all other colours), demonstrating metrological domain separation on string.
+By successfully applying MDP to Inca knotted cords — where cord colour replaces commodity ideograms and knot values replace written numerals — the method proves that the Administrative Segregation Principle operates across recording media. Black cords (LK) show a completely inverted knot-type signature (80% L-type vs 23% for all other colours), demonstrating metrological domain separation on string.
+
+Paper III extends this to demonstrate that the khipu encodes information across six independent channels: cord colour, knot type, fiber material, tree depth, physical construction, and canutito wrapping — each operating independently and each contributing to the administrative ontology of the document.
 
 ---
 
@@ -165,6 +182,8 @@ By successfully applying MDP to Inca knotted cords — where cord colour replace
 | v7 | May 2026 | + Inca Khipu | Cross-medium validation; black cord knot inversion |
 | v8 | May 2026 | + Cretan Hieroglyphic | Aegean Trilogy complete; KU-RO cognate confirmed |
 | **Paper II published** | May 2026 | **7 scripts total** | DOI: [10.17613/q536f-0wa13](https://doi.org/10.17613/q536f-0wa13) |
+| v9 | June 2026 | Inca Khipu (deep) | 3D tactile-spatial MDP: fiber, depth, transitions, canutito |
+| **Paper III draft** | June 2026 | **Khipu 3D Ontology** | 16 findings, 3 falsified. "The Spreadsheet Fallacy" |
 
 ---
 
@@ -188,7 +207,7 @@ This provides the first corpus-scale statistical evidence that Indus seal animal
 
 This research was conducted using **KARP** (Knowledge Acquisition Research Protocol), a multi-agent AI deliberation system developed by SoulDriver Research that orchestrates Claude (Anthropic), GPT, Gemini (Google), and Grok through structured adversarial research sessions.
 
-The complete Paper II research trajectory — Linear A, Linear B, Inca Khipu, and Cretan Hieroglyphic — was conducted in a single research session of approximately three hours, demonstrating the potential of structured multi-agent AI deliberation for accelerating computational humanities research.
+The complete Paper II research trajectory — Linear A, Linear B, Inca Khipu, and Cretan Hieroglyphic — was conducted in a single research session of approximately three hours. Paper III — the full 3D khipu ontology with 16 findings, verification suite, and database audit — was similarly completed in a single extended session, demonstrating the potential of structured multi-agent AI deliberation for accelerating computational humanities research.
 
 For more on KARP and SoulDriver Research, visit [souldriver.com.au](https://souldriver.com.au).
 
@@ -210,6 +229,9 @@ Script. SoulDriver Research. DOI: 10.17613/mmjdt-ba806
 Sharman, A. (2026). Metrological Domain Profiling II: Functional Economic Ontologies
 from the Aegean Bronze Age to the Inca Empire. SoulDriver Research.
 DOI: 10.17613/q536f-0wa13
+
+Sharman, A. (2026). Metrological Domain Profiling III: Reconstructing the 3D Tactile
+Grammar of the Inca Khipu. SoulDriver Research.
 ```
 
 ### Acknowledgements
@@ -222,3 +244,5 @@ DOI: 10.17613/q536f-0wa13
 - **Robert K. Englund and Peter Damerow** for foundational work on proto-cuneiform numeral systems
 - **Jacob L. Dahl** for Proto-Elamite sign identifications
 - **Michael Ventris and John Chadwick** for the decipherment of Linear B
+- **Marcia and Robert Ascher** for foundational khipu research and the Code of the Quipu
+- **Gary Urton** for the khipu binary coding theory and the Open Khipu Repository

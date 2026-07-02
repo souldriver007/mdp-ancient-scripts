@@ -3,7 +3,7 @@
 
 **Author:** Adrian Sharman, SoulDriver Research ([souldriver.com.au](https://souldriver.com.au))
 
-**Paper IV:** *Metrological Domain Profiling IV: Dual Systems, Redundant Channels, and the Imperial Data Network of the Inca Khipu* (Sharman, July 2026)
+**Paper IV:** *Metrological Domain Profiling IV: Dual Systems, Redundant Channels, and the Imperial Data Network of the Inca Khipu* (Sharman, July 2026) — DOI: [10.17613/2d7r8-26m93](https://doi.org/10.17613/2d7r8-26m93)
 
 **Paper III:** *Metrological Domain Profiling III: Reconstructing the 3D Tactile Grammar of the Inca Khipu* (Sharman, June 2026) — DOI: [10.17613/c97d4-pgs78](https://doi.org/10.17613/c97d4-pgs78)
 
@@ -260,6 +260,7 @@ DOI: 10.17613/q536f-0wa13
 
 Sharman, A. (2026). Metrological Domain Profiling IV: Dual Systems, Redundant Channels,
 and the Imperial Data Network of the Inca Khipu. SoulDriver Research.
+DOI: 10.17613/2d7r8-26m93
 
 Sharman, A. (2026). Metrological Domain Profiling III: Reconstructing the 3D Tactile
 Grammar of the Inca Khipu. SoulDriver Research. DOI: 10.17613/c97d4-pgs78

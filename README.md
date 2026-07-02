@@ -3,6 +3,8 @@
 
 **Author:** Adrian Sharman, SoulDriver Research ([souldriver.com.au](https://souldriver.com.au))
 
+**Paper IV:** *Metrological Domain Profiling IV: Dual Systems, Redundant Channels, and the Imperial Data Network of the Inca Khipu* (Sharman, July 2026)
+
 **Paper III:** *Metrological Domain Profiling III: Reconstructing the 3D Tactile Grammar of the Inca Khipu* (Sharman, June 2026) — DOI: [10.17613/c97d4-pgs78](https://doi.org/10.17613/c97d4-pgs78)
 
 **Paper II:** *Metrological Domain Profiling II: Functional Economic Ontologies from the Aegean Bronze Age to the Inca Empire* (Sharman, May 2026) — DOI: [10.17613/q536f-0wa13](https://doi.org/10.17613/q536f-0wa13)
@@ -14,6 +16,8 @@
 ### Overview
 
 This repository contains the complete code and methodology for **Metrological Domain Profiling (MDP)**, a novel computational method that classifies signs in ancient administrative scripts by analysing their statistical co-occurrence with metrological numeral systems. The method requires no linguistic assumptions, no phonetic hypotheses, and no prior knowledge of sign meanings.
+
+**Update — July 2026:** MDP Paper IV applies Shannon entropy analysis to 720 compound colours across 39,172 pendant cords, revealing a three-tier vowel/consonant information hierarchy and proving that collapsing compound colours (standard practice since the Aschers) discards 27% of the colour signal. Corpus-wide classification of all 612 khipus identifies three co-existing administrative systems: System A (Logistical, 154), System B (Demographic, 28), and System C (Categorical, 63). Cross-site matched-pair analysis maps a continental bidirectional data network (3,512 pairs, 1,747 cross-site, p < 0.001). Evolutionary analysis traces System B through Wari antecedents to a pre-Wari human-hair origin. Collection audits of Santa Valley and Leymebamba prove both contain exclusively state copies, explaining 100 years of the "Spreadsheet Fallacy." Research conducted via Multi-Agent Deliberation Distillation (MADD) using the KARP platform with Claude, Gemini, and Grok. 30 findings, 9 falsifications.
 
 **Update — June 2026:** MDP Paper III extends khipu analysis from 1D colour profiling to **full 3D tactile-spatial ontology**, exploiting fiber type, subsidiary tree depth, colour transition constraints, and canutito metadata across 54,403 cords. Sixteen structural findings identified including forbidden colour sequences, decimal run-length groupings, and an independent canutito metadata layer (98.6% colour-divergent from parent cords). Three hypotheses explicitly tested and falsified (spacing as punctuation, Hanan/Hurin midpoint split, cord thickness).
 
@@ -29,6 +33,8 @@ This repository contains the complete code and methodology for **Metrological Do
 | 6 | **Linear B** | 1400 BCE | Greece | 5,832 inscriptions | Control Validation | **Functional ontology proof** — MDP classifies by administrative context, not dictionary meaning |
 | 7 | **Inca Khipu** | 1400 CE | South America | 619 khipus, 54,403 cords, 110,677 knots | Cord-Colour Domain Profiling | **Black cord knot inversion**; colour-value domain separation; provenance specialisation |
 | 7b | **Inca Khipu (Paper III)** | 1400 CE | South America | 54,403 cords, 619 khipus | 3D Tactile-Spatial MDP | **Forbidden colour transitions**; fiber redefines domains (41×); subsidiary summation (17.4%); canutito independent metadata layer; decimal run-length groupings |
+
+| 7c | **Inca Khipu (Paper IV)** | 1400 CE | South America | 612 khipus, 39,172 pendant cords | Shannon Entropy + System Classification | **720-colour alphabet**; 27% information loss quantified; 3 administrative systems (A/B/C); continental data network (p<0.001); Wari-to-hair evolutionary lineage; survival bias proven |
 
 ### The Administrative Segregation Principle
 
@@ -71,12 +77,23 @@ This principle operates in Sumerian clay tablets (3200 BCE), Proto-Elamite accou
 | `khipu_verify.py` | **Verification suite:** 8 independent raw SQL cross-checks validating all key findings. Includes Zipf's Law control experiments with 3 randomised baselines. |
 | `khipu_audit.py` | **Database audit:** Complete schema scan of the OKR identifying 16+ previously unexploited variables (ATTACH_POS, SPACING, TERMINATION, THICKNESS, CORD_LEVEL, AXIS_ORIENTATION, canutito tables, primary cord metadata). |
 
+#### Paper IV Scripts (July 2026)
+
+| File | Description |
+|------|-------------|
+| `corpus_sweep.py` | **Corpus-wide census:** Classifies all 612 khipus into System A/B/C/Mixed with confidence scores. Produces the demographic N-counts cited in Paper IV. |
+| `mdp_entropy.py` | **Shannon entropy analysis:** Computes information content for all 720 FULL_COLORs, quantifies the 27% information loss from compound collapse, colour-value taxonomy, and site-specific motif search. |
+| `mdp_classifier.py` | **System classification:** 6-8 dimension composite scoring with documented thresholds, value distribution shape analysis, and clean summation with spacer auto-detection. |
+| `mdp_matched_pairs.py` | **Continental network:** Cross-site matched-pair detection, formatting-direction analysis, and Monte Carlo null-hypothesis validation (N=1,000, p<0.001). |
+| `verify_findings.sql` | **Glass Box SQL:** 8 raw SQL queries executable in DB Browser for SQLite against the public OKR database. Zero programming knowledge required. |
+
 #### Papers
 
 | File | Description |
 |------|-------------|
 | `MDP_Tri_Script_Paper_V1_Sharman_2026.pdf` | Paper I — Proto-Cuneiform, Proto-Elamite, Indus Valley |
 | `MDP_Paper_II_v2_Sharman_2026.pdf` | Paper II — Aegean Trilogy + Inca Khipu |
+| `MDP_Paper_IV_Sharman_2026.pdf` | Paper IV — Inca Khipu Dual Systems, Colour Alphabet, Continental Network |
 | `MDP_Paper_III_Sharman_2026.pdf` | Paper III — Inca Khipu 3D Tactile Grammar |
 
 #### Terminal Outputs
@@ -87,6 +104,10 @@ This principle operates in Sumerian clay tablets (3200 BCE), Proto-Elamite accou
 | `linearb_mdp_terminal_output.md` | Full terminal output from Linear B control validation. |
 | `khipu_mdp_terminal_output.md` | Full terminal output from Inca Khipu analysis (Paper II). |
 | `cretan_hieroglyphic_mdp_terminal_output.md` | Full terminal output from Cretan Hieroglyphic analysis. |
+| `corpus_sweep_output.md` | Full terminal output from the corpus-wide classification sweep (612 khipus). |
+| `mdp_entropy_output.md` | Full terminal output from Shannon entropy colour analysis. |
+| `mdp_classifier_output.md` | Full terminal output from system classification + shape analysis. |
+| `mdp_matched_pairs_output.md` | Full terminal output from matched-pair network + Monte Carlo validation. |
 | `khipu_mdp_v3_5_terminal_output.md` | Full terminal output from Paper III 3D tactile-spatial analysis (v3 + v3.5, 16 tests). |
 
 ---
@@ -130,6 +151,10 @@ python linearb_mdp.py                  # Paper II — Linear B (control validati
 python khipu_mdp.py                    # Paper II — Inca Khipu
 python cretan_hieroglyphic_mdp.py      # Paper II — Cretan Hieroglyphic
 python khipu_mdp_v3_5_final.py         # Paper III — Inca Khipu 3D ontology (16 tests)
+python corpus_sweep.py                  # Paper IV — Corpus-wide system census (612 khipus)
+python mdp_entropy.py                   # Paper IV — Shannon entropy colour analysis
+python mdp_classifier.py                # Paper IV — System A/B/C classification
+python mdp_matched_pairs.py             # Paper IV — Continental network + Monte Carlo
 ```
 
 ### Requirements
@@ -185,6 +210,9 @@ Paper III extends this to demonstrate that the khipu encodes information across 
 | v9 | June 2026 | Inca Khipu (deep) | 3D tactile-spatial MDP: fiber, depth, transitions, canutito |
 | **Paper III published** | June 2026 | **Khipu 3D Ontology** | DOI: [10.17613/c97d4-pgs78](https://doi.org/10.17613/c97d4-pgs78) — 16 findings, 3 falsified. "The Spreadsheet Fallacy" |
 
+| v10 | July 2026 | Inca Khipu (deep) | Dual-system ontology, Shannon entropy, colour alphabet, continental network |
+| **Paper IV final** | July 2026 | **30 findings, 9 falsifications** | 612 khipus classified; 720 colours; 3,512 matched pairs (p<0.001); hair khipu discovery; MADD methodology |
+
 ---
 
 ### The Indus Discovery
@@ -205,9 +233,9 @@ This provides the first corpus-scale statistical evidence that Indus seal animal
 
 ### Research Infrastructure
 
-This research was conducted using **KARP** (Knowledge Acquisition Research Protocol), a multi-agent AI deliberation system developed by SoulDriver Research that orchestrates Claude (Anthropic), GPT, Gemini (Google), and Grok through structured adversarial research sessions.
+This research was conducted using **KARP** (Knowledge Acquisition Research Protocol), a multi-agent AI deliberation system developed by SoulDriver Research that orchestrates Claude (Anthropic), GPT, Gemini (Google), and Grok (xAI) through structured adversarial research sessions using the **Multi-Agent Deliberation Distillation (MADD)** methodology.
 
-The complete Paper II research trajectory — Linear A, Linear B, Inca Khipu, and Cretan Hieroglyphic — was conducted in a single research session of approximately three hours. Paper III — the full 3D khipu ontology with 16 findings, verification suite, and database audit — was similarly completed in a single extended session, demonstrating the potential of structured multi-agent AI deliberation for accelerating computational humanities research.
+Paper IV was researched and written across three extended sessions totalling approximately 12 hours, producing 30 findings, 9 falsifications, 4 standalone Python scripts, 8 SQL verification queries, and a 22-page publication-ready paper. The KARP Khipu Graph MCP server (25 tools) was hosted via Anthropic's Claude Desktop MCP integration for interactive corpus exploration. All findings were extracted from MCP tools into deterministic scripts for peer-review reproducibility (the "Glass Box" approach).
 
 For more on KARP and SoulDriver Research, visit [souldriver.com.au](https://souldriver.com.au).
 
@@ -229,6 +257,9 @@ Script. SoulDriver Research. DOI: 10.17613/mmjdt-ba806
 Sharman, A. (2026). Metrological Domain Profiling II: Functional Economic Ontologies
 from the Aegean Bronze Age to the Inca Empire. SoulDriver Research.
 DOI: 10.17613/q536f-0wa13
+
+Sharman, A. (2026). Metrological Domain Profiling IV: Dual Systems, Redundant Channels,
+and the Imperial Data Network of the Inca Khipu. SoulDriver Research.
 
 Sharman, A. (2026). Metrological Domain Profiling III: Reconstructing the 3D Tactile
 Grammar of the Inca Khipu. SoulDriver Research. DOI: 10.17613/c97d4-pgs78
